@@ -1,0 +1,186 @@
+#miCarrusel {
+    max-width: 70%; /* Cambia el ancho máximo */
+    max-height: 60%; /* Cambia el alto máximo */
+    margin: 20px auto; /* Centra el carrusel */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto estético */
+}
+
+#miCarrusel img {
+    object-fit: cover; /* Ajusta las imágenes al tamaño del carrusel */
+    height: 100%; /* Asegura que las imágenes llenen el alto */
+    ;
+}
+
+/* Ajusta los controles de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 50%; /* Forma circular */
+    padding: 10px; /* Espaciado interno */
+}
+body {
+    background: linear-gradient(to bottom, #baffc6, #649c6e); /* Degradado suave */
+    color: #004012; /* Color del texto para buen contraste */
+    font-family: Arial, sans-serif; /* Fuente legible */
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    width: 18rem; /* Ancho fijo para todas las tarjetas */
+    height: 25rem; /* Alto fijo para todas las tarjetas */
+    margin: 10px auto; /* Centra las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido esté bien distribuido */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    border-radius: 15px; /* Bordes redondeados */
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Fondo degradado */
+    border: 1px solid #ddd; /* Borde sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el cursor */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta al pasar el cursor */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.card-img-top {
+    height: 12rem; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta las imágenes sin deformarlas */
+    border-top-left-radius: 15px; /* Bordes redondeados superiores */
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre la imagen y el contenido */
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center; /* Centra el texto */
+    background-color: #9dd4b2; /* Fondo blanco para el contenido */
+    border-bottom-left-radius: 15px; /* Bordes redondeados inferiores */
+    border-bottom-right-radius: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Color del título */
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #333; /* Color del texto */
+}
+
+.card .btn {
+    background-color: #274a39; /* Color del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease; /* Animación al pasar el cursor */
+}
+
+.card .btn:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+.logo {
+    width: 200px; /* Ajusta el tamaño del logo */
+    height: 200px; /* Ajusta el tamaño del logo */
+    object-fit: contain; /* Asegura que el logo no se deforme */
+}
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    border: 2px solid #00513c; /* Borde azul */
+    border-radius: 15px; /* Bordes redondeados */
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff); /* Fondo degradado */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    z-index: 1000;
+    overflow: hidden; /* Oculta contenido que sobresale */
+}
+
+.chatbot-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f9f9f9; /* Fondo claro */
+    border-bottom: 2px solid #5d8cbe; /* Línea divisoria */
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 2px solid #004b38; /* Línea divisoria */
+}
+
+.chatbot-input input {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    border-radius: 0 0 0 15px;
+    font-size: 1rem;
+    outline: none; /* Elimina el borde al hacer clic */
+}
+
+.chatbot-input button {
+    border: none;
+    background-color: #00361c;
+    color: white;
+    padding: 15px;
+    border-radius: 0 0 15px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chatbot-input button:hover {
+    background-color: #115b2b;
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+.chatbot-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.chatbot-message.user {
+    background-color: #115b2b;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+}
+
+.chatbot-message.bot {
+    background-color: #f0f0f0;
+    color: #333;
+    align-self: flex-start;
+    text-align: left;
+    margin-right: auto;
+}
+
+/* Animación de entrada para los mensajes */
+.chatbot-message {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
